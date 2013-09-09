@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" class="wf-omnespro-n2-active wf-omnespro-n3-active wf-proximanova-n1-active wf-proximanova-n4-active wf-proximanova-n7-active wf-active yui3-js-enabled" style="word-wrap: break-word;">
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {block:Description}
+        <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+	    <link rel="shortcut icon" href="{Favicon}">
+	    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+	     <!-- Customizables-->
+		<meta name="font:title" content="'Oswald', sans-serif"/>
+		<meta name="font:heading" content="'Oswald', sans-serif"/>
+		<meta name="font:body" content="'EB Garamond', sans-serif"/>
+		<meta name="font:description" content="'EB Garamond', sans-serif"/>
+        <meta name="color:border" content="#787878"/>
+        <meta name="color:Link" content="#333333"/>
+        <meta name="color:Text" content="#222222"/>
+        <meta name="color:Link Underline" content="#1398e4"/>
+		<meta name="if:Notes" content="1"/>
+		<meta name="if:Permalink" content="0"/> 
+	    <title>{Title}</title>
+		<link href='http://fonts.googleapis.com/css?family=Oswald|EB+Garamond' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+		<style>
+			body {
+				font-family: {font:body};
+				color: {color:Text};
+			}
+			* {
+			    -webkit-box-sizing: border-box;
+			    -moz-box-sizing: border-box;
+			    box-sizing: border-box;
+			}
+			a, .post-description div > a img, .post-description div > a:hover img, .post-description div > a:focus img {
+			    text-decoration: none;
+			    border:none!important;
+			}
+			.post-description a {
+			    text-decoration: none;
+			    color: {color:Link};
+			    border-bottom:2px solid {color:Link Underline};
+			    padding-bottom:.1em;
+			}
+			.post-description a:hover,
+			.post-description a:focus {
+			    font-style: oblique;
+			}
+			h1, h2, h3, h4, h5, h6, h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+				font-family: {font:heading};
+				text-transform:uppercase;
+				letter-spacing:none;
+			    font-weight: 200;
+			}
+			/* LAYOUT CSS */
+			#layout {
+			    padding-left: 30%; /* "left col (nav + list)" width */
+			    position: relative;
+			}
+			
+			.sidebar {
+			    position: fixed;
+			    top: 0;
+			    bottom: 0;
+			    width: 30%;
+			    margin-left: -30%;
+			    border-right: 1.5px dotted {color:border};
+			    color:{color:text};
+			}
+			
+			.header {
+			    margin: 30% 5em 0;
+			    text-align: left;
+    				padding:2em;
+    			    border: 1.5px dotted {color:border};
+			}
+			
+			.title,
+			.tagline {
+			    margin: 0;
+			}
+			.title {
+				letter-spacing: -1px;
+				line-height: 1.2em;
+				font-family: {font:title};
+				color:{color:text}!important;
+				font-size:2.3em;
+				padding-bottom:.5em;
+			    font-weight: 200;
+			}
+			p.tagline {
+			    font-weight: 400;
+    				font-family: {font:text};
+    				text-transform:capitalize;
+    				color:{color:Link Underline}!important;
+			}
+			
+			.nav-list {
+			    margin: 0;
+			    padding: 0;
+			    list-style: none;
+			}
+			.nav-item {
+			    display: inline-block;
+			    *display: inline;
+			    zoom: 1;
+			}
+			.nav-item a {
+			    background: transparent;
+			    font-style: oblique;
+			    border: 3px solid rgb(103, 103, 180);
+			    color: #fff;
+			    margin-top: 1em;
+			}
+			.nav-item a:hover,
+			.nav-item a:focus {
+			    color: rgb(142, 142, 214);
+			    text-decoration: none;
+			}
+			
+			.content-subhead {
+			    text-transform: uppercase;
+			    color: #aaa;
+			    border-bottom: 1px solid #eee;
+			    padding: 0.4em 0;
+			    font-size: 80%;
+			    font-weight: 500;
+			    letter-spacing: 0.1em;
+			}
+			
+			.content {
+			    padding: 2em 3em 0;
+			}
+			
+			.post {
+			    padding-bottom: 2em;
+			}
+			.post-title {
+			    font-size: 2em;
+			    color: #222;
+			    margin-bottom: 0.2em;
+			}
+			.post-avatar {
+			    border-radius: 50px;
+			    float: right;
+			    margin-left: 1em;
+			}
+			.post-description {
+			    font-family: {font:description};
+			    color: #444;
+			    line-height: 1.8em;
+			}
+			.post-meta {
+			    color: #999;
+			    font-size: 90%;
+			    margin: 0;
+			}
+			
+			.post-category {
+			    margin: 0 0.1em;
+			    padding: 0.3em 1em;
+			    color: #fff;
+			    background: #999;
+			    font-size: 80%;
+			}
+			    .post-category-design {
+			        background: #5aba59;
+			    }
+			    .post-category-pure {
+			        background: #4d85d1;
+			    }
+			    .post-category-yui {
+			        background: #8156a7;
+			    }
+			    .post-category-js {
+			        background: #df2d4f;
+			    }
+			
+			.post-images {
+			    margin: 1em 0;
+			}
+			.post-image-meta {
+			    margin-top: -3.5em;
+			    margin-left: 1em;
+			    color: #fff;
+			    text-shadow: 0 1px 1px #333;
+			}
+			
+			.footer {
+			    text-align: center;
+			    padding: 1em 0;
+			}
+			.footer a {
+			    color: #ccc;
+			    font-size: 80%;
+			}
+			.footer .pure-menu a:hover,
+			.footer .pure-menu a:focus {
+			    background: none;
+			}
+			
+			@media (max-width: 767px) {
+			    .sidebar {
+			        width: 100%;
+			        position: relative;
+			        margin: 0;
+			    }
+			
+			    .header {
+			        text-align: center;
+			        top: auto;
+			        margin: 3em auto;
+			        position: static;
+			    }
+			
+			    #layout {
+			        padding: 0;
+			    }
+			}
+			
+			@media (max-width: 480px) {
+			    .content {
+			        padding: 2em 1em 0;
+			    }
+			}
+
+		</style>
+		<script charset="utf-8" id="yui_3_10_1_1_1378744785339_2" src="http://yui.yahooapis.com/combo?3.10.1/oop/oop-min.js&amp;3.10.1/event-custom-base/event-custom-base-min.js&amp;3.10.1/dom-core/dom-core-min.js&amp;3.10.1/dom-base/dom-base-min.js&amp;3.10.1/selector-native/selector-native-min.js&amp;3.10.1/selector/selector-min.js&amp;3.10.1/node-core/node-core-min.js&amp;3.10.1/node-base/node-base-min.js&amp;3.10.1/event-base/event-base-min.js&amp;3.10.1/event-delegate/event-delegate-min.js&amp;3.10.1/node-event-delegate/node-event-delegate-min.js" async=""></script>
+		</head>
+	<body>
+		<div class="pure-g-r" id="layout">
+		    <div class="sidebar pure-u">
+		        <header class="header">
+		            <hgroup>
+		                <h1 class="title">{Title}</h1>
+		                {block:Description}<p class="tagline">{Description}</p>{/block:Description}
+		            </hgroup>
+		            <nav class="nav">
+		                <ul class="nav-list">
+		                    <li class="nav-item">
+		                    </li>
+		                </ul>
+		            </nav>
+		        </header>
+		    </div>
+		    <div class="pure-u-1">
+		        <div class="content">
+		            <!-- A wrapper for all the blog posts -->
+		            <div class="posts">
+		                <h1 class="content-subhead">Pinned Post</h1>
+		
+		                <!-- A single blog post -->
+		                <section class="post">
+		                    <header class="post-header">
+		                        <h2 class="post-title">Introducing Pure</h2>
+		                    </header>
+		
+		                    <div class="post-description">
+		                        
+		                    </div>
+		                </section>
+		                <section class="post">
+		                    <header class="post-header">
+		                        <h2 class="post-title">Photos from CSSConf and JSConf</h2>
+		                        <p class="post-meta">
+		                            By <a class="post-author" href="#">Reid Burke</a> under <a class="post-category" href="#">Uncategorized</a>
+		                        </p>
+		                    </header>
+		                    <div class="post-description">
+		                        <div class="post-images pure-g-r">
+		                            <div class="pure-u-1-2">
+		                                <a href="http://www.flickr.com/photos/uberlife/8915936174/">
+		                                    <img alt="Photo of someone working poolside at a resort" src="http://farm8.staticflickr.com/7448/8915936174_8d54ec76c6.jpg">
+		                                </a>
+		
+		                                <div class="post-image-meta">
+		                                    <h3>CSSConf Photos</h3>
+		                                </div>
+		                            </div>
+		
+		                            <div class="pure-u-1-2">
+		                                <a href="http://www.flickr.com/photos/uberlife/8907351301/">
+		                                    <img alt="Photo of the sunset on the beach" src="http://farm8.staticflickr.com/7382/8907351301_bd7460cffb.jpg">
+		                                </a>
+		
+		                                <div class="post-image-meta">
+		                                    <h3>JSConf Photos</h3>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </section>
+		            </div>
+		            <footer class="footer">
+		                <div class="pure-menu pure-menu-horizontal pure-menu-open">
+		                    <ul>
+		                        <li><a href="http://purecss.io/">About</a></li>
+		                        <li><a href="http://twitter.com/yuilibrary/">Twitter</a></li>
+		                        <li><a href="http://github.com/yui/pure/">Github</a></li>
+		                    </ul>
+		                </div>
+		            </footer>
+		        </div>
+		    </div>
+		</div>
+	<script src="http://yui.yahooapis.com/3.10.1/build/yui/yui-min.js"></script>
+	<script>
+	YUI().use('node-base', 'node-event-delegate', function (Y) {
+	    // This just makes sure that the href="#" attached to the <a> elements
+	    // don't scroll you back up the page.
+	    Y.one('body').delegate('click', function (e) {
+	        e.preventDefault();
+	    }, 'a[href="#"]');
+	});
+	</body>
+	</script>
+</html>
