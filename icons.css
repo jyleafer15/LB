@@ -3,10 +3,10 @@
  * **/
 @font-face {
 	font-family: 'ElegantIcons';
-	src:url('https://github.com/jyleafer15/LB/raw/master/fonts/fonts/ElegantIcons.eot');
-	src:url('https://github.com/jyleafer15/LB/raw/master/fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'),
-		url('https://github.com/jyleafer15/LB/raw/master/fonts/ElegantIcons.woff') format('woff'),
-		url('https://github.com/jyleafer15/LB/raw/master/fonts/ElegantIcons.ttf') format('truetype'),
+	src:url('http://static.tumblr.com/hw7jydn/xS5msvhad/eleganticons.eot');
+	src:url('http://static.tumblr.com/hw7jydn/xS5msvhad/eleganticons.eot?#iefix') format('embedded-opentype'),
+		url('http://static.tumblr.com/hw7jydn/RbKmsvhbj/eleganticons.woff') format('woff'),
+		url('http://static.tumblr.com/hw7jydn/rrbmsvhb3/eleganticons.ttf') format('truetype'),
 		url('https://raw.github.com/jyleafer15/LB/master/fonts/ElegantIcons.svg#ElegantIcons') format('svg');
 	font-weight: normal;
 	font-style: normal;
